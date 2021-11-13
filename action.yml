@@ -3,22 +3,22 @@ description: 'GitHub Action to deploy code using AWS CodeDeploy'
 inputs:
     applicationName:
         description: 'AWS CodeDeploy application name; defaults to short repository name'
-	required: true
+        required: true
     computePlatform:
-	description: 'The platform to which code needs to be deployed; defaults to Lambda function'
-	required: true
+        description: 'The platform to which code needs to be deployed; defaults to Lambda function'
+        required: true
     deploymentGroupName:
-	description: 'AWS CodeDeploy Deployment Group name'
-    	required: true
+        description: 'AWS CodeDeploy Deployment Group name'
+        required: true
     deploymentConfigName:
-	description: 'AWS CodeDeploy Deployment Configuration used for the deployment; defaults to AllAtOnce'
-	required: false
-	default: 'AllAtOnce'
+        description: 'AWS CodeDeploy Deployment Configuration used for the deployment; defaults to AllAtOnce'
+        required: false
+        default: 'AllAtOnce'
 outputs:
     applicationId:
-	description: 'AWS CodeDeploy Application Id'
+        description: 'AWS CodeDeploy Application Id'
     deploymentGroupId:
-	descripton: 'AWS CodeDeploy Deployment Group Id'
+        descripton: 'AWS CodeDeploy Deployment Group Id'
     deploymentId:
         description: 'AWS CodeDeploy Deployment Id of the deployment created'
     deploymentCreatedTime:

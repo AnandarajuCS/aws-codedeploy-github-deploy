@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  aws_codedeploy_deployment:
+    runs-on: ubuntu-latest
+    name: A job to deploy your code using AWS CodeDeploy
+    steps:
+      - name: Create a CodeDeploy deployment
+        id: deployment
+        uses: AnandarajuCS/aws-codedeploy-github-deploy@v1.0
+        with:
+          applicationName: 'SimpleApplication'
+          computePlatform: 'Lambda'
+          deploymentGroupName: 'SimpleDeploymentGroup'
+          deploymentConfigName: 'AllAtOnce'
+      - name: Get the deployment creation time
+        run: echo "The time at which the deployment created was ${{ steps.deployment.outputs.deploymentCreatedTime }}"
