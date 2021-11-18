@@ -1,24 +1,24 @@
 name: 'AnandarajuCS/aws-codedeploy-github-deploy'
 description: "GitHub Action to deploy code using AWS CodeDeploy"
 inputs:
-    applicationName:
-        description: "AWS CodeDeploy application name. Defaults to short repository name"
-    computePlatform:
-        description: "The platform to which code needs to be deployed. Defaults to Lambda function"
-    deploymentGroupName:
-        description: "AWS CodeDeploy Deployment Group name"
-    deploymentConfigName:
-        description: "AWS CodeDeploy Deployment Configuration used for the deployment. Defaults to AllAtOnce"
-        default: "AllAtOnce"
+  applicationName:
+    description: "AWS CodeDeploy application name. Defaults to short repository name"
+  computePlatform:
+    description: "The platform to which code needs to be deployed. Defaults to Lambda function"
+  deploymentGroupName:
+    description: "AWS CodeDeploy Deployment Group name"
+  deploymentConfigName:
+    description: "AWS CodeDeploy Deployment Configuration used for the deployment. Defaults to AllAtOnce"
+    default: "AllAtOnce"
 outputs:
-    applicationId:
-        description: "AWS CodeDeploy Application Id"
-    deploymentGroupId:
-        descripton: "AWS CodeDeploy Deployment Group Id"
-    deploymentId:
-        description: "AWS CodeDeploy Deployment Id of the deployment created"
-    deploymentCreatedTime:
-        description: "Time at which the deployment was created"
+  applicationId:
+    description: "AWS CodeDeploy Application Id"
+  deploymentGroupId:
+    descripton: "AWS CodeDeploy Deployment Group Id"
+  deploymentId:
+    description: "AWS CodeDeploy Deployment Id of the deployment created"
+  deploymentCreatedTime:
+    description: "Time at which the deployment was created"
 runs:
-    using: "node12"
-    main: "dist/index.js"
+  using: "node12"
+  main: "dist/index.js"
